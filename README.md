@@ -16,8 +16,8 @@
 
 ## 术语说明
   - JText: Json text, [JSON文本](https://minecraft-zh.gamepedia.com/%E5%91%BD%E4%BB%A4#JSON.E6.96.87.E6.9C.AC)是mc中聊天组件的最小组成
-  - token: 可操作的最小单元，对应mc中的一个JText 
-  - token group: token的集合，对应mc中的一个Tellraw、book中一页
+  - tile: 可操作的最小单元，对应mc中的一个JText 
+  - tile group: tile的集合，对应mc中的一个Tellraw、book中一页
   - 文本样式：样式栏内容，包括是否粗体、是否斜体、是否下划线、是否模糊、及字体颜色
 
 > P.S. 以上仅为个人定义
@@ -28,15 +28,16 @@
 
 主预览可以把用户当前操作呈现出来，实时预览
 
-- 点选操作: 鼠标点击token即可，点击后会有高亮显示
+- 点选操作: 鼠标点击tile即可，点击后会有高亮显示
 - 更换背景色: 右下角有个拾色器，可以点击更换颜色
 
 ### 操作栏
 
-- 添加: 当你完成一个token后想要继续添加一个样式不一样的token时可以点击此按钮
-- 删除: 当你不想要某个token时，选中一个token可以将其移除，不可恢复
-- 清空: 当你不想要当前这个工程时，可以点击此按钮，所有的token都会被删除，不可恢复
-- 取消: 可以取消token的高亮
+- 添加: 当你完成一个tile后想要继续添加一个样式不一样的tile时可以点击此按钮
+- 插入: 选中一个非空tile，在此tile前插入一个新的tile
+- 删除: 当你不想要某个tile时，选中一个tile可以将其移除，不可恢复
+- 清空: 当你不想要当前这个工程时，可以点击此按钮，所有的tile都会被删除，不可恢复
+- 取消: 可以取消tile的高亮
 - 生成: 生成一段可用的JText
 - 保存: 将当前工程保存，可以在输出面板查看
 - 导入: 可以把合法的json文本解析
@@ -59,7 +60,7 @@
 
 ### 可选类型
 
-在一个token中仅能选择一个可选类型，即text | nbt | selector | score，对应JText中的相应nbt标签，
+在一个tile中仅能选择一个可选类型，即text | nbt | selector | score，对应JText中的相应nbt标签，
 
 关于显示：选择text显示对应的文本，其他由于无法确定内容，所以对应显示[@ + 类型]
 
@@ -69,16 +70,16 @@
 
 ### 输出面板
 
-预制了4种常用的指令，tellraw、sign(告示牌)、book(成书)、title，勾选列表中的token然后点击对应的按钮
+预制了4种常用的指令，tellraw、sign(告示牌)、book(成书)、title，勾选列表中的tile然后点击对应的按钮
 
-> 注意，这里输出不会做功能校验，如token的clickEvent选择的是跳转页码，但是您生成的是告示牌，系统不会产成警告，所以请保证您token的正确性。
+> 注意，这里输出不会做功能校验，如tile的clickEvent选择的是跳转页码，但是您生成的是告示牌，系统不会产成警告，所以请保证您tile的正确性。
 
 ### 快捷键
 
-  - shift + enter 添加一个token，相当于点击按钮[新增]
+  - shift + enter 添加一个tile，相当于点击按钮[新增]
   - enter 换行
-  - escape 取消选中状态的token，相当于点击按钮[取消]
-  - ctrl + delete 删除选中状态的token，相当于点击按钮[删除]
+  - escape 取消选中状态的tile，相当于点击按钮[取消]
+  - ctrl + delete 删除选中状态的tile，相当于点击按钮[删除]
   - ctrl + B 加粗，相当于点击按钮[粗体]
   - ctrl + I 斜体，相当于点击按钮[斜体]
   - ctrl + U 下划线，相当于点击按钮[下划线]
@@ -88,8 +89,8 @@
   - ctrl + P 打开输出面板，相当于点击按钮[输出]
   - alt + ArrowUp 上一个颜色
   - alt + ArrowDown 下一个颜色
-  - alt + ArrowLeft 选中前一个token
-  - alt + ArrowLeft 选中后一个token
+  - alt + ArrowLeft 选中前一个tile
+  - alt + ArrowLeft 选中后一个tile
 
 ## 开发工具
 
