@@ -4,6 +4,10 @@
 
 当然了，此软件开发还在开发阶段，如果遇到问题，请您第一时间通知我，还有就是也大家能积极参与测试，您提供宝贵的建议和意见我都会仔细看。软件还没有定名字，暂定为[jtext studio](https://haima16.github.io/mc-jtext/)，目标就是打造最好用的mc JSON Text生成器
 
+## 地址
+- gitee: http://hans000.gitee.io/jtext-studio/
+- github: https://haima16.github.io/mc-jtext/
+
 ## 功能特色
 
 - 可视化、实时预览
@@ -98,3 +102,5 @@
 
 - 技术栈：react + typescript，使用antd UI框架，使用react新特性Hooks
 - 编辑器：VS Code
+
+> 如果对你有帮助，不妨支持一下我哦~
