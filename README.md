@@ -1,33 +1,32 @@
 ## 前言
 
-现有的Json Text生成器有很多，但总是不那么好用，不论界面设计的多好，但本质交互设计上就不友好。理想的Json Text生成器应该像使用word编辑文稿一样，不过由于技术问题，只能折中实处理，尽量的做到便捷、实用。希望能帮助到热爱MC的你。
+现有的Json Text生成器有很多，但总是不那么好用，不论界面设计的多好，但本质交互设计上就不友好。理想的Json Text生成器应该像使用word编辑文稿一样，不过由于个人技术问题，只能折中实处理，尽量的做到便捷、实用。
 
-当然了，此软件开发还在开发阶段，如果遇到问题，请您第一时间通知我，还有就是也大家能积极参与测试，您提供宝贵的建议和意见我都会仔细看。软件还没有定名字，暂定为[jtext studio](https://haima16.github.io/mc-jtext/)，目标就是打造最好用的mc JSON Text生成器
+做此软件的初衷是希望帮助热爱mc的玩家，尤其是制作地图和萌新们，现在MC在国内的形式感觉又慢慢好转起来，但优秀的地图并似乎没有随之增多，究其原因还是mc在变的好玩的同时也越来越复杂，制作地图的大大们真的是要身兼多项技能，更不要说萌新们了。
 
 ## 地址
-| 源     | 链接                                          | 使用文档                                           | 问题反馈                                                  | 更新日志                                                     |
-| ------ | --------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
-| gitee  | [链接](http://hans000.gitee.io/jtext-studio/) | [使用文档](https://gitee.com/hans000/JText-Studio) | [问题反馈](https://gitee.com/hans000/JText-Studio/issues) | [更新日志](https://gitee.com/hans000/JText-Studio/blob/master/log.md) |
-| github | [链接](https://haima16.github.io/mc-jtext/)   | [使用文档](https://github.com/haima16/mc-jtext)    | [问题反馈](https://github.com/haima16/mc-jtext/issues)    | [更新日志](https://github.com/haima16/mc-jtext/blob/master/log.md) |
+| 源             | 链接                                          | 使用文档                                           | 问题反馈                                                  | 更新日志                                                     |
+| -------------- | --------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
+| gitee（国内）  | [链接](http://hans000.gitee.io/jtext-studio/) | [使用文档](https://gitee.com/hans000/JText-Studio) | [问题反馈](https://gitee.com/hans000/JText-Studio/issues) | [更新日志](https://gitee.com/hans000/JText-Studio/blob/master/log.md) |
+| github（国际） | [链接](https://haima16.github.io/mc-jtext/)   | [使用文档](https://github.com/haima16/mc-jtext)    | [问题反馈](https://github.com/haima16/mc-jtext/issues)    | [更新日志](https://github.com/haima16/mc-jtext/blob/master/log.md) |
 
 
 
 ## 功能特色
 
-- 可视化、实时预览
-- 模板化，模块化（工程一键分享，快速导入）
-- 丰富的快捷操键操作
-- 强大的二次编辑功能，灵活增删改，且支持拖拽排序
-
-> 适用版本: 已mc最新的格式，暂不兼容低版本
+- 所见即所得
+- 模板化、模块化
+- 丰富的快捷操键
+- 强大的编辑功能
+- 实时保存
 
 ## 术语说明
 
-  - JText: Json text, [JSON文本](https://minecraft-zh.gamepedia.com/%E5%91%BD%E4%BB%A4#JSON.E6.96.87.E6.9C.AC)是mc中聊天组件的最小组成
-  - tile: 可操作的最小单元，对应mc中的一个JText 
-  - tile group: tile的集合，对应mc中的一个Tellraw、book中一页等
-  - 文本样式：样式栏内容，包括是否粗体、是否斜体、是否下划线、是否模糊、及字体颜色
-  - 工程：当前操作的tile group
+  - JText、Json text：[JSON文本](https://minecraft-zh.gamepedia.com/%E5%91%BD%E4%BB%A4#JSON.E6.96.87.E6.9C.AC)是mc中聊天组件的最小组成
+  - tile：可操作的最小单元，对应mc中的一个JText 
+  - tile group：tile的集合，对应mc中的一个Tellraw、book中一页等
+  - raw json text：JText的集合
+  - export json：生成器导出的工程数据
 
 > P.S. 只是为方便说明，仅为个人定义
 
@@ -43,47 +42,33 @@
 ### 操作栏
 
 - 添加: 当你完成一个tile后想要继续添加一个样式不一样的tile时可以点击此按钮
-- ~~插入: 选中一个非空tile，在此tile前插入一个新的tile~~
-- ~~克隆：当你选中一个非空tile时，可以复制该tile并插入改tile后面，如果没有选中且处于最后时，可以复制所有的tile~~
 - 拆分：强大的功能，替代了「插入」「克隆」功能，按回车符将其拆分为多个tile
 - 删除: 当你不想要某个tile时，选中一个tile可以将其移除，不可恢复
 - 清空: 当你不想要当前这个工程时，可以点击此按钮，所有的tile都会被删除，不可恢复
 - 取消: 可以取消tile的高亮
 - 生成: 生成一段可用的JText
-- 暂存~~保存~~: 将当前工程保存，可以在仓库查看
+- 暂存: 将当前工程保存，可以在仓库查看
 - 导入: 可以把合法的json文本解析
 - 导出: 可以把当前的内容保存为json文本，作为模板
-- 仓库~~输出~~: 打开仓库管理
+- 仓库~~~~: 打开仓库管理
 
 ### 样式
 
 样式共6项，对应JText中的6个字体样式nbt标签，即加粗、斜体、下划线、删除线、混淆和字体颜色，并设置快捷键，详细见快捷键
 
-### 点击事件
+### 事件
 
-点击事件分5种，open_url | run_command | change_page | suggest_command | copy_to_clipboard
+点击事件：分5种，open_url | run_command | change_page | suggest_command | copy_to_clipboard
 
-### 悬浮事件
-
-点击事件分3种 text | block | entity
-
-注意: 当类型选择text时，会有两种模式，默认常规模式是以普通文本显示，如果是要以JText格式显示，请选择高级模式
+悬浮事件：分3种 text | block | entity。注意: 当类型选择text时，会有两种模式，默认常规模式是以普通文本显示，如果是要以JText格式显示，请选择高级模式
 
 ### 可选类型
 
-在一个tile中仅能选择一个可选类型，即text | nbt | selector | score，对应JText中的相应nbt标签，
+在一个tile中仅能选择一个可选类型，即text | nbt | selector | score，对应JText中的相应nbt标签，关于显示：选择text显示对应的文本，其他由于无法确定内容，所以对应显示[@ + 类型]
 
-> 关于显示：选择text显示对应的文本，其他由于无法确定内容，所以对应显示[@ + 类型]
+1. text：默认使用当前项，普通的文本模式，使用最普遍
 
-1. text
-
-   默认使用当前项，普通的文本模式，使用最普遍
-
-2. nbt
-
-   新增解析功能，使用游戏中使用F3 + i复制nbt数据粘贴进行解析，辅助用户填写nbt路径
-
-   > 妈妈再也不用担心我不会nbt路径了~
+2. nbt：新增解析功能，使用游戏中使用F3 + i复制nbt数据粘贴进行解析，辅助用户填写nbt路径。妈妈再也不用担心我不会nbt路径了~
 
 3. selector
 
@@ -122,7 +107,7 @@
   - ctrl + B 加粗，相当于点击按钮[粗体]
   - ctrl + I 斜体，相当于点击按钮[斜体]
   - ctrl + U 下划线，相当于点击按钮[下划线]
-  - ctrl + S 删除线，相当于点击按钮[删除线]
+  - ctrl + shift + S 删除线，相当于点击按钮[删除线]
   - ctrl + O 模糊，这里暂时用上划线替代，相当于点击按钮[模糊]
   - ctrl + G 生成代码，相当于点击按钮[生成]
   - ctrl + P 打开输出面板，相当于点击按钮[输出]
@@ -131,7 +116,7 @@
   - alt + ArrowLeft 选中前一个tile
   - alt + ArrowLeft 选中后一个tile
   - ctrl + K 拆分，相当于点击按钮[拆分]
-  - ctrl + shift + s 暂存功能，相当与点击按钮「暂存」
+  - ctrl + S 暂存功能，相当与点击按钮「暂存」
 
 ## 开发工具与技术
 
