@@ -1,5 +1,8 @@
 # 更新日志
 
+## 2020-05-01
+- 使用mojangson-parser2.0，修复由于1.16新nbt格式导致的显示问题
+
 ## 2020-04-17
 
 - 引入新的parser，mojangson-parser
