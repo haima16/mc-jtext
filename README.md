@@ -16,7 +16,7 @@
 
 ## 文档说明
 
-[链接](https://github.com/haima16/mc-jtext/docs.md)
+[链接](https://gitee.com/hans000/JText-Studio/blob/master/docs.md)
 
 
 
